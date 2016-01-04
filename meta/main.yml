@@ -1,0 +1,20 @@
+---
+
+dependencies: []
+
+galaxy_info:
+
+  author:              Elao
+  company:             Elao
+  description: >
+    Setup and config <skeleton>
+  license: MIT
+  min_ansible_version: 1.9.0
+  platforms:
+    - name: Debian
+      versions:
+        - wheezy
+        - jessie
+  categories:
+    - development
+    - web
