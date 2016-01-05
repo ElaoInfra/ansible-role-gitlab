@@ -1,0 +1,26 @@
+---
+
+- name: configs > Templates
+  template:
+    src:  "{{ item.template }}"
+    dest: "{{ elao_gitlab_configs_dir }}/{{ item.file }}"
+  with_items: elao_gitlab_configs
+  notify:
+    - gitlab reconfigure
+
+- name: configs > Exclusive - find files
+  command: "find -type f -printf '%P\n'"
+  args:
+    chdir: "{{ elao_gitlab_configs_dir }}"
+  changed_when: false
+  register: _elao_gitlab_configs_find_output
+  when: elao_gitlab_configs_exclusive
+
+- name: configs > Exclusive - remove files
+  file:
+    path:  "{{ elao_gitlab_configs_dir }}/{{ item }}"
+    state: absent
+  when: elao_gitlab_configs_exclusive and (item not in elao_gitlab_configs|map(attribute='file'))
+  with_items: _elao_gitlab_configs_find_output.stdout_lines
+  notify:
+    - gitlab reconfigure

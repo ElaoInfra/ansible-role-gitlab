@@ -5,4 +5,4 @@
     name:  "{{ item }}"
     state: present
   with_items:
-    - <skeleton>
+    - gitlab-ce{{ '=' ~ elao_gitlab_version if (elao_gitlab_version) else '' }}

@@ -1,3 +1,7 @@
 ---
 
-elao_<skeleton>_config: {}
+elao_gitlab_version: ~
+
+elao_gitlab_configs_dir: /etc/gitlab
+elao_gitlab_configs_exclusive: false
+elao_gitlab_configs: []
