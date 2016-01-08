@@ -1,6 +1,6 @@
 <img src="http://www.elao.com/images/corpo/logo_red_small.png"/>
 
-[![Ansible Role](https://img.shields.io/ansible/role/<skeleton>.svg?style=plastic)](https://galaxy.ansible.com/list#/roles/<skeleton>) [![Platforms](https://img.shields.io/badge/platforms-debian-lightgrey.svg?style=plastic)](#) [![License](http://img.shields.io/:license-mit-lightgrey.svg?style=plastic)](#)
+[![Ansible Role](https://img.shields.io/ansible/role/6902.svg?style=plastic)](https://galaxy.ansible.com/list#/roles/6902) [![Platforms](https://img.shields.io/badge/platforms-debian-lightgrey.svg?style=plastic)](#) [![License](http://img.shields.io/:license-mit-lightgrey.svg?style=plastic)](#)
 
 # Ansible Role: Gitlab
 
